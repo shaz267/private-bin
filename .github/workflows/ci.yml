@@ -12,6 +12,6 @@ jobs:
       - name: 🔨 Running tests
         uses: php-actions/phpunit@v3
         with:
-          php_extensions: gd sqlite3 dom json libxml mbstring tokenizer xml xmlwriter zip
+          php_extensions: gd sqlite3 dom json libxml mbstring tokenizer xml xmlwriter zip #9.6.11
       - name: ✅ Tests completed
         run: echo "Job status is '${{ job.status }}'"
