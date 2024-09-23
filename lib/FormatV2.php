@@ -22,7 +22,7 @@ class FormatV2
     /**
      * version 2 format validator
      *
-     * Checks if the given array is a proper version 2 formatted, encrypted message.
+     * Checks if the given array is a proper version 2 formated, encrypted message.
      *
      * @access public
      * @static
