@@ -12,8 +12,9 @@ jobs:
       - name: 🔨 Running tests
         uses: php-actions/phpunit@v3
         with:
-          php_extensions: gd sqlite3 dom json libxml mbstring tokenizer xml xmlwriter zip
+          php_extensions: gd sqlite3 dom json libxml mbstring tokenizer xml xmlwriter zip xdebug
           version: 9.6.11
+          coverage_cobertura: coverage/coverage.corbertura.xml
       - name: ✅ Tests completed
         run: echo "Job status is '${{ job.status }}'"
 
