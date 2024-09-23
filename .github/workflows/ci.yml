@@ -14,14 +14,14 @@ jobs:
         with:
           php_extensions: gd sqlite3 dom json libxml mbstring tokenizer xml xmlwriter zip xdebug
           version: 9.6.11
-          coverage_cobertura: coverage/coverage.corbertura.xml
+          configuration: phpunit.xml
       - name: ✅ Tests completed
         run: echo "Job status is '${{ job.status }}'"
 
       - name: Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
         with:
-          filename: coverage/**/coverage.cobertura.xml
+          filename: log/coverage-cobertura.xml
           badge: true
           fail_below_min: true
           format: markdown
