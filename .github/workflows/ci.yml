@@ -36,3 +36,11 @@ jobs:
           thresholds: '60 80'
       - name: Adding Markdown
         run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+      - name: Start Code checking Tools
+        run: echo "Starting PHPCS ..."
+      - name: 📂 Export fichiers sur le serveur
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+            server: 188.165.230.7
+            username: group14
+            password: ${{ secrets.ftp_password }}
